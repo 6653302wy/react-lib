@@ -1,0 +1,44 @@
+.overlay {
+    z-index: 9998;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* 默认是可以点击穿透的 */
+    pointer-events: none;
+}
+
+.overlay_center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay_modal {
+    background-color: rgba(0, 0, 0, 0.8);
+    pointer-events: auto;
+}
+
+.modal {
+    position: relative;
+    /* 弹出的窗口div是不可以点击穿透的 */
+    pointer-events: auto;
+}
+
+.scaleTweenModel {
+    animation: scaleOut 0.3s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes scaleOut {
+    0% {
+        transform: scale(0.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

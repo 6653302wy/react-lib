@@ -1,0 +1,101 @@
+.blackMark {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.alphaMark {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 9999;
+    background-color: transparent;
+}
+
+@keyframes hudShowAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes hudTextShowAnimation {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.hudContainer {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    z-index: 10000;
+    animation: hudShowAnimation 300ms ease forwards;
+}
+
+.hudTextContainer {
+    max-width: 600px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    white-space: nowrap;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    animation: hudTextShowAnimation 300ms ease forwards;
+}
+
+@keyframes hudAnimation {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.hudIcon {
+    width: 30px;
+    height: 30px;
+    display: block;
+    background: url('./assets/loading-out-white.png') no-repeat center center;
+    background-size: cover;
+    animation: hudAnimation 1s linear forwards infinite;
+}
+
+.hudText {
+    padding: 10px;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+}

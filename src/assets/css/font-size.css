@@ -1,0 +1,15 @@
+html {
+    font-size: calc(100vw / 7.5);
+    max-width: 750px;
+    margin: auto;
+}
+
+@media screen and (min-width: 750px) {
+    html {
+        font-size: 100px;
+    }
+}
+
+body {
+    font-size: 0.28rem;
+}

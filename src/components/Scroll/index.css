@@ -1,0 +1,97 @@
+.scrollerWrapper {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.scrollerWrapper.disabled {
+    overflow: hidden;
+}
+
+.disabledScreen {
+    overflow: hidden;
+    height: 100vh;
+}
+
+.scrollerContainer {
+    position: absolute;
+    z-index: 1;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    width: 100%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+.scrollerWrapper.scrollerWindow {
+    position: static;
+    overflow: visible;
+    -webkit-overflow-scrolling: auto;
+}
+
+.scrollerWrapper.scrollerWindow .scrollerContainer {
+    position: static;
+}
+
+.scrollerWrapper .scrollLoading {
+    padding: 15px 0;
+}
+
+.scrollerWrapper .downTip {
+    position: absolute;
+    left: 50%;
+    z-index: 10;
+    top: 10px;
+    transform: translateX(-50%);
+    overflow: hidden;
+}
+
+.scrollerWrapper .complete {
+    color: #999;
+    font-size: .32rem;
+    text-align: center;
+    padding: .1rem 0;
+}
+
+.scrollerWrapper .downTip img {
+    width: .7rem;
+    transform-origin: center center;
+}
+
+.pullDown {
+    background: transparent;
+}
+
+.pullDownLoading {
+    animation: rotateAnimate 500ms linear infinite;
+}
+
+.dFlex {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+
+.justifyContentCenter {
+    -webkit-box-pack: center !important;
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+}
+
+@keyframes rotateAnimate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

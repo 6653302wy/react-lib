@@ -1,0 +1,74 @@
+* {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+*:not(input):not(textarea) {
+  -webkit-overflow-scrolling: touch;
+  user-select: none;
+}
+
+html {
+  margin-top: 0 !important;
+  font-family: sans-serif;
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  -webkit-text-size-adjust: none !important;
+  -webkit-overflow-scrolling: touch;
+  background-color: rgb(250, 251, 253);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+button:active {
+  filter: brightness(0.8);
+}
+
+input {
+  outline: none;
+}
+
+.loading-layer {
+  height: 0 !important;
+  line-height: 0 !important;
+}
+
+.disabled-screen {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* @font-face {
+    font-family: 'Number DIN Alternate';
+    src: local('DIN'), url(../fonts/DIN-Alternate-Bold.ttf);
+} */
+
+div::-webkit-scrollbar {
+  display: none;
+}
